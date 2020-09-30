@@ -21,5 +21,4 @@ Se utiliza la guía de estilos de [Angular](https://angular.io/guide/styleguide)
 
 - `npm install` para descargar las dependencias
 - `npm start` inicia la aplicación en modo desarrollo, puede abrir el navegador en la siguiente url [http://localhost:3000](http://localhost:3000)
-- `npm test` para ejecutar las pruebas
 - `npm run build` para generar el artefacto distribuible para producción 
