@@ -1,5 +1,6 @@
 import {
   LISTAR_USUARIOS,
+  CAMBIAR_FONDO_TITULO_TABLA,
   TiposAccionesUsuario,
 } from './UsuariosTiposAcciones';
 import { Usuario } from 'app/feature/Usuario/models/Usuario';
@@ -11,6 +12,15 @@ export function listarUsuarios(
   return {
     type: LISTAR_USUARIOS,
     payload: usuarios,
+  };
+}
+
+export function cambiarFondoTituloTabla(
+  color: string,
+): TiposAccionesUsuario {
+  return {
+    type: CAMBIAR_FONDO_TITULO_TABLA,
+    payload: color,
   };
 }
 

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { ProveedorFondoTituloTabla } from '../../hoc/ProveedorFondoTituloTabla';
 import { Usuario } from '../../models/Usuario';
 import { Table } from './styles';
 
@@ -11,7 +12,7 @@ export class ListaUsuarios extends React.Component<ListaUsuariosProps> {
   render() {
     return (
       <Table>
-        <caption>Lista de Usuarios</caption>
+        <ProveedorFondoTituloTabla>Lista de Usuarios</ProveedorFondoTituloTabla>
         <thead>
           <tr>
             <th>

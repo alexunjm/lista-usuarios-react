@@ -1,5 +1,6 @@
 import {
   listarUsuariosAsync,
+  cambiarFondoTituloTabla
 } from 'app/core/redux/acciones/usuarios/UsuariosAcciones';
 import { EstadoGeneral } from 'app/core/redux/modelo/EstadoGeneral';
 import { GestionUsuarios } from '../containers/GestionUsuarios';
@@ -11,4 +12,5 @@ const mapStateToProps = (state: EstadoGeneral) => {
 
 export const ProveedorGestionUsuarios = connect(mapStateToProps, {
   listarUsuarios: listarUsuariosAsync,
+  cambiarFondoTituloTabla
 })(GestionUsuarios);

@@ -4,15 +4,18 @@ import { DivContainer, DivRow, Hr } from './styles';
 import { ListaUsuarios } from '../../components/ListarUsuarios';
 import { Usuario } from '../../models/Usuario';
 import { BtnListarUsuarios } from '../../components/BtnListarUsuarios';
+import InputColor, { Color } from 'react-input-color';
 
 interface GestionUsuariosProps {
   usuarios: Array<Usuario>;
   listarUsuarios: () => void;
+  cambiarFondoTituloTabla: (color: string) => void;
 }
 
 export const GestionUsuarios: React.FC<GestionUsuariosProps> = ({
   usuarios,
   listarUsuarios,
+  cambiarFondoTituloTabla,
 }) => {
   return (
     <DivContainer>
@@ -25,6 +28,11 @@ export const GestionUsuarios: React.FC<GestionUsuariosProps> = ({
       </DivRow>
       <Hr/>
       <DivRow>
+        <InputColor
+          initialValue="#fff"
+          onChange={(color: Color) => cambiarFondoTituloTabla(color.hex)}
+          placement="right"
+        />
         <ListaUsuarios
           usuarios={usuarios}
         />
@@ -37,4 +45,5 @@ export const GestionUsuarios: React.FC<GestionUsuariosProps> = ({
 GestionUsuarios.propTypes = {
   usuarios: PropTypes.array.isRequired,
   listarUsuarios: PropTypes.func.isRequired,
+  cambiarFondoTituloTabla: PropTypes.func.isRequired,
 };
