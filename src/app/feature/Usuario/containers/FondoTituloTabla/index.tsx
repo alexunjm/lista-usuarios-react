@@ -1,6 +1,5 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import styled from 'styled-components';
 
 interface FondoTituloTablaProps {
   color: string;
@@ -10,10 +9,7 @@ export const FondoTituloTabla: React.FC<FondoTituloTablaProps> = ({
   children,
   color,
 }) => {
-  const Caption = styled.caption`
-    background-color: ${color};
-  `;
-  return <Caption>{children}</Caption>
+  return <caption style={{backgroundColor: color}}>{children}</caption>
 };
 
 FondoTituloTabla.propTypes = {

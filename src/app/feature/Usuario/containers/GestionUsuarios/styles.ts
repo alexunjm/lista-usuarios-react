@@ -5,6 +5,12 @@ export const DivContainer = styled.div`
   width: 100%;
 `;
 
+export const DivSpaceBetween = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-content
+`;
+
 export const DivRow = styled.div`
   position: relative;
   width: 100%;

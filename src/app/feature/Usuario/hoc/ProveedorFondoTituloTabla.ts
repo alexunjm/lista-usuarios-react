@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { FondoTituloTabla } from '../containers/FondoTituloTabla';
 
 const mapStateToProps = (state: EstadoGeneral) => {
-  console.log({state});
   return {color: state.usuarios.captionBackgroundColor};
 };
 

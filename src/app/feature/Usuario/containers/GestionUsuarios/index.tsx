@@ -1,6 +1,6 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { DivContainer, DivRow, Hr } from './styles';
+import { DivContainer, DivRow, DivSpaceBetween, Hr } from './styles';
 import { ListaUsuarios } from '../../components/ListarUsuarios';
 import { Usuario } from '../../models/Usuario';
 import { BtnListarUsuarios } from '../../components/BtnListarUsuarios';
@@ -19,20 +19,20 @@ export const GestionUsuarios: React.FC<GestionUsuariosProps> = ({
 }) => {
   return (
     <DivContainer>
-      <DivRow>
+      <DivSpaceBetween>
         <BtnListarUsuarios
           onListar={() => {
             listarUsuarios()
           }}
         ></BtnListarUsuarios>
-      </DivRow>
-      <Hr/>
-      <DivRow>
         <InputColor
           initialValue="#fff"
           onChange={(color: Color) => cambiarFondoTituloTabla(color.hex)}
           placement="right"
         />
+      </DivSpaceBetween>
+      <Hr />
+      <DivRow>
         <ListaUsuarios
           usuarios={usuarios}
         />

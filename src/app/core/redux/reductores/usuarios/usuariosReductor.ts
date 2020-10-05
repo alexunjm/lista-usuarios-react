@@ -26,7 +26,6 @@ export default function (
     
     case CAMBIAR_FONDO_TITULO_TABLA: {
       const captionBackgroundColor = action.payload;
-      console.log('usuariosReductor', CAMBIAR_FONDO_TITULO_TABLA, {captionBackgroundColor});
       
       return {
         ...state,
